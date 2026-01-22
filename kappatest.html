@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KappaTest - Présentation</title>
+
+ 
+  <style>
+     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f7f9fc;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+  
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.95);
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo { font-weight: bold; font-size: 1.5rem; color: #7548a8; }
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links a { color: #1f2937; font-weight: 500; transition: 0.3s; }
+    .nav-links a:hover { color: #f59e0b; }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 4px;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: #1f2937;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; flex-direction: column; background: rgba(0,0,0,0.8); position: absolute; top: 60px; right: 0; width: 200px; padding: 1rem; border-radius: 8px; }
+      .nav-links.show { display: flex; }
+      .nav-links a { color: white; }
+      .menu-toggle { display: flex; }
+    }
+ 
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 120px 20px 60px;
+    }
+
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h1 { font-size: 36px; color: #7548a8; margin-bottom: 10px; }
+    .section-header p { font-size: 18px; color: #4b5563; }
+
+    
+    .videos-grid {
+      display: grid;
+      grid-template-columns: 300px 300px 300px;
+      gap: 30px;
+    }
+    .video-card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+     
+      transition: transform 0.3s;
+    }
+    .video-card:hover { transform: translateY(-5px); }
+    .video-card h3 { color: #f59e0b; margin-bottom: 10px; font-size: 20px; }
+    .video-card p { margin-bottom: 10px; color: #6b7280; }
+    video { width: 100%; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+
+   
+    .retourne {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: solid  #f59e0b;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .retourne:hover { background: #d97706; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">Portfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="experiences.html">Stages</a></li>
+      <li><a href="projet.html">Projets</a></li>
+      <li><a href="competance.html">Compétences</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="section-header">
+    <h1>KappaTest - Présentation</h1>
+    <p>Projet académique avec 4 démonstrations vidéo</p>
+  </div>
+
+  <div class="videos-grid">
+    
+    <div class="video-card">
+      <h3>Module 1 - Inscription et Authentification</h3>
+      <p>Gestion sécurisée des utilisateurs avec formulaire et validation.</p>
+      <video controls>
+        <source src="../assets/Draexlmaier - Document Relatifs à l'Usine 2024-09-03 14-14-35.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+
+   
+    <div class="video-card">
+      <h3>Module 2 - Test en Ligne</h3>
+      <p>Interface de test avec chronomètre et suivi des questions.</p>
+      <video controls>
+        <source src="../assets/أسئلة 2024-09-03 14-36-21.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+
+    
+    <div class="video-card">
+      <h3>Module 3 - Résultats et Statistiques</h3>
+      <p>Analyse et affichage des scores, statistiques par utilisateur.</p>
+      <video controls>
+        <source src="../assets/Convertisseur JPG en JPEG - FreeConvert.com - Google Chrome 2024-09-03 14-45-27.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+    </div>
+
+  
+  <a href="projets.html" class="retourne">← Retour aux projets</a>
+</main>
+
+<script>
+  const toggle = document.getElementById("menuToggle");
+  const nav = document.getElementById("navLinks");
+  toggle.onclick = () => nav.classList.toggle("show");
+</script>
+
+</body>
+</html>

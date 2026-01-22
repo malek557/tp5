@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Présentation IIT</title>
+
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #1f2937;
+  padding-top: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #7548a8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #7548a8;
+  font-weight: 500;
+}
+
+.nav-links a.active {
+  color: #f59e0b;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #7548a8;
+}
+
+.intro {
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  color: #444;
+}
+
+
+.filiere {
+  margin-bottom: 60px;
+}
+
+.filiere h3 {
+  color: #7548a8;
+  margin-bottom: 10px;
+}
+
+.filiere p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+
+.slider {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  animation: slide 9s infinite;
+}
+
+.slides img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); } /* decaler vers la gauche*/
+  100% { transform: translateX(0); }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">Portfolio</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="parcours.html">Parcours</a></li>
+      <li><a href="competence.html">Compétences</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="iit.html" class="active">IIT</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="container">
+  <h2>Institut International de Technologie (IIT)</h2>
+
+  <p class="intro">
+    L’Institut International de Technologie (IIT) est une école d’ingénieurs privée basée au Sfax,Tunisie
+    offrant une formation moderne orientée vers les besoins du marché.
+    Il met l’accent sur la pratique, l’innovation et l’employabilité des étudiants.
+  </p>
+
+ 
+  <div class="filiere">
+    <h3>Génie Informatique</h3>
+    <p>
+      Cette filière forme des ingénieurs spécialisés en développement logiciel,
+      intelligence artificielle et technologies web.
+    </p>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="../assets/iit.jpeg">
+        <img src="../assets/iit2.jpg">
+        <img src="img/info3.jpg">
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="filiere">
+    <h3>Génie Industriel</h3>
+    <p>
+      Elle est axée sur la gestion des systèmes industriels,
+      la logistique et l’optimisation des processus.
+    </p>
+
+    <div class="slider">
+      <div class="slides">
+        <img src="img/indus1.jpg">
+        <img src="img/indus2.jpg">
+        <img src="img/indus3.jpg">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</body>
+</html>
